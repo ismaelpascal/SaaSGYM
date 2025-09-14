@@ -16,10 +16,10 @@ class PageController
     /**
      * Muestra el panel de control (dashboard) visual.
      */
-    public function showDashboard()
+    public function showClients()
     {
         $pageTitle = 'Panel de Control';
-        require __DIR__ . '/../views/pages/dashboard.view.php';
+        require __DIR__ . '/../views/pages/clients.view.php';
     }
 }
 

@@ -11,7 +11,7 @@ $router = new Router();
 
 // 3. Definir las rutas VISUALES de la aplicación
 $router->get('/login', 'PageController@showLogin');
-$router->get('/dashboard', 'PageController@showDashboard');
+$router->get('/clients', 'PageController@showClients');
 $router->get('/', 'PageController@showLogin');
 
 // 4. Obtener la URL y el método de la petición
@@ -25,4 +25,5 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 // 5. Despachar la ruta
 $router->dispatch($uri, $method);
+
 

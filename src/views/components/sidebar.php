@@ -1,11 +1,34 @@
 <aside class="w-64 h-full bg-white text-gray-800 flex flex-col flex-shrink-0 border-r border-gray-200">
-    <div class="p-6 border-b border-gray-200">
-        <h2 class="text-2xl font-bold text-center">SaaS - GYM</h2>
-    </div>
-
     <nav class="flex-grow mt-6">
+        <a href="/SaaSGYM/public/clients" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>Miembros</span>
+        </a>
         <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>gym</span>
+            <span>2</span>
+        </a>
+        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>3</span>
+        </a>
+        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>4</span>
+        </a>
+        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>5</span>
+        </a>
+        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>6</span>
+        </a>
+        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>7</span>
+        </a>
+        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>8</span>
+        </a>
+        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>9</span>
+        </a>
+        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>10</span>
         </a>
     </nav>
 
