@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /SaaSGYM/public/
+
+# Redirige todas las peticiones que NO son un archivo existente
+RewriteCond %{REQUEST_FILENAME} !-f
+# Redirige todas las peticiones que NO son un directorio existente
+RewriteCond %{REQUEST_FILENAME} !-d
+# A nuestro index.php
+RewriteRule . index.php [L]

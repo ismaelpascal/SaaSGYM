@@ -1,9 +1,0 @@
-{
-    "name": "ddl/saasgym",
-    "autoload": {
-        "psr-4": {
-            "Ddl\\Saasgym\\": "src/"
-        }
-    },
-    "require": {}
-}
