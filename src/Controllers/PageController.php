@@ -36,5 +36,17 @@ class PageController
         $pageTitle = 'Entrenamiento';
         require __DIR__ . '/../views/pages/train.view.php';
     }
+
+    public function showMarketingSales()
+    {
+        $pageTitle = 'Marketing y Ventas';
+        require __DIR__ . '/../views/pages/marketingSales.view.php';
+    }
+
+    public function showReports()
+    {
+        $pageTitle = 'Reportes y Análisis';
+        require __DIR__ . '/../views/pages/reports.view.php';
+    }
 }
 
