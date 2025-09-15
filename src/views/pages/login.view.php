@@ -1,6 +1,4 @@
-<?php
-$pageTitle = 'Iniciar Sesión';
-include __DIR__ . '/../layouts/loginHeader.php';?>
+<?php include __DIR__ . '/../layouts/loginHeader.php';?>
 
     <main class="h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-6 bg-white p-8 border border-gray-300 rounded-lg">

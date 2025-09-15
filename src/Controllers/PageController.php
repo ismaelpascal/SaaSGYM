@@ -13,13 +13,28 @@ class PageController
         require __DIR__ . '/../views/pages/login.view.php';
     }
 
-    /**
-     * Muestra el panel de control (dashboard) visual.
-     */
     public function showClients()
     {
-        $pageTitle = 'Panel de Control';
+        $pageTitle = 'Gestión de Clientes';
         require __DIR__ . '/../views/pages/clients.view.php';
+    }
+
+    public function showCollection()
+    {
+        $pageTitle = 'Cobranza y Finanzas';
+        require __DIR__ . '/../views/pages/collection.view.php';
+    }
+
+    public function showPlans()
+    {
+        $pageTitle = 'Gestión de Planes';
+        require __DIR__ . '/../views/pages/plans.view.php';
+    }
+
+    public function showTrain()
+    {
+        $pageTitle = 'Entrenamiento';
+        require __DIR__ . '/../views/pages/train.view.php';
     }
 }
 

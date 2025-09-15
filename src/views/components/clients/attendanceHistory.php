@@ -2,9 +2,9 @@
 
     <div class="flex justify-between items-center border-b pb-2 mb-4">
         <h3 class="text-xl font-bold text-gray-800">Historial de Asistencias</h3>
-        <button id="prevMonthBtn" class="p-2 rounded-full hover:bg-gray-100"><</button>
+        <button id="prevMonthBtn" class="p-2 rounded-full hover:bg-gray-100">⬅️</button>
         <h3 id="calendarMonthYear" class="text-xl font-bold text-gray-800"></h3>
-        <button id="nextMonthBtn" class="p-2 rounded-full hover:bg-gray-100">></button>
+        <button id="nextMonthBtn" class="p-2 rounded-full hover:bg-gray-100">➡️</button>
     </div>
     
     <div class="grid grid-cols-7 gap-2 text-center">

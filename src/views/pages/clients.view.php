@@ -1,7 +1,4 @@
-<?php 
-$pageTitle = 'Gestión de Clientes'; 
-include __DIR__ . '/../layouts/header.php'; 
-?>
+<?php include __DIR__ . '/../layouts/header.php'; ?>
 
 <div class="flex h-screen overflow-hidden">
 

@@ -3,11 +3,11 @@
         <a href="/SaaSGYM/public/clients" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
             <span>Miembros</span>
         </a>
-        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>2</span>
+        <a href="/SaaSGYM/public/collection" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>Cobranza y Finanzas</span>
         </a>
-        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>3</span>
+        <a href="/SaaSGYM/public/plans" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>Gestión de Planes</span>
         </a>
         <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
             <span>4</span>
