@@ -37,10 +37,22 @@ class PageController
         require __DIR__ . '/../views/pages/train.view.php';
     }
 
-    public function showMarketingSales()
+    public function showSales()
     {
-        $pageTitle = 'Marketing y Ventas';
-        require __DIR__ . '/../views/pages/marketingSales.view.php';
+        $pageTitle = 'Ventas';
+        require __DIR__ . '/../views/pages/sales.view/sales.view.php';
+    }
+
+    public function showSalesTicket()
+    {
+        $pageTitle = 'Venta a Retirar';
+        require __DIR__ . '/../views/pages/sales.view/salesTicket.view.php';
+    }
+
+    public function showProductCatalog()
+    {
+        $pageTitle = 'Catálogo de Productos';
+        require __DIR__ . '/../views/pages/sales.view/productCatalog.view.php';
     }
 
     public function showReports()

@@ -12,8 +12,8 @@
         <a href="/SaaSGYM/public/train" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
             <span>Entrenamiento</span>
         </a>
-        <a href="/SaaSGYM/public/marketing-sales" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>Marketing y Ventas</span>
+        <a href="/SaaSGYM/public/sales" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
+            <span>Ventas</span>
         </a>
         <a href="/SaaSGYM/public/reports" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
             <span>Reportes y Análisis</span>

@@ -8,7 +8,7 @@
 
         <div class="flex flex-grow overflow-hidden">
             
-            <?php include __DIR__ . '/../components/clients/clientList.php'; ?>
+            <?php include __DIR__ . '/../components/clientList.php'; ?>
 
             <div class="w-3/4 p-6 flex flex-col space-y-6 overflow-y-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -15,7 +15,9 @@ $router->get('/clients', 'PageController@showClients');
 $router->get('/collection', 'PageController@showCollection');
 $router->get('/plans', 'PageController@showPlans');
 $router->get('/train', 'PageController@showTrain');
-$router->get('/marketing-sales', 'PageController@showMarketingSales');
+$router->get('/sales', 'PageController@showSales');
+$router->get('/sales/ticket', 'PageController@showSalesTicket');
+$router->get('/sales/catalog', 'PageController@showProductCatalog');
 $router->get('/reports', 'PageController@showReports');
 
 $router->get('/', 'PageController@showLogin');
