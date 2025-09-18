@@ -16,7 +16,18 @@
         </header>
         <div class="flex flex-grow overflow-hidden">
 
-            <?php include __DIR__ . '/../../components/clientList.php'; ?>
+            <div class="w-1/4 h-full flex flex-col border-r border-gray-200">
+                <div class="flex-shrink-0 p-4 bg-white border-b border-gray-200">
+                    <div class="flex items-center space-x-2">
+                        <div class="flex-grow">
+                            <?php include __DIR__ . '/../../components/searchBar.php'; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-grow overflow-y-auto">
+                    <?php include __DIR__ . '/../../components/clientList.php'; ?>
+                </div>
+            </div>
 
             <div class="w-2/4 p-6 flex flex-col space-y-6 overflow-y-auto">
                 <?php include __DIR__ . '/../../components/sales/productCatalog.php'; ?>
@@ -27,7 +38,5 @@
         </div>
     </main>
 </div>
-
-<?php include __DIR__ . '/../../components/addClient.php'; ?>
 
 <?php include __DIR__ . '/../../layouts/footer.php';?>
