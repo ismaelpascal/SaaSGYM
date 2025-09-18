@@ -28,4 +28,6 @@
     </main>
 </div>
 
+<?php include __DIR__ . '/../../components/addClient.php'; ?>
+
 <?php include __DIR__ . '/../../layouts/footer.php';?>
