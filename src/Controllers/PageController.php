@@ -58,7 +58,7 @@ class PageController
     public function showReports()
     {
         $pageTitle = 'Reportes y Análisis';
-        require __DIR__ . '/../views/pages/reports.view.php';
+        require __DIR__ . '/../views/pages/reports.view/reports.view.php';
     }
 }
 
