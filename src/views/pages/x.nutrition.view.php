@@ -17,3 +17,14 @@ Automatización de Marketing por Comportamiento:
 Si un socio asiste a 5 clases de Yoga en un mes, que el sistema automáticamente le envíe un email promocionando un nuevo workshop de "Yoga Avanzado".
 
 Si un socio deja de venir por 10 días, que le llegue un mensaje automático de "¿Necesitas un empujón? ¡Tu próxima clase va por nuestra cuenta!".
+
+<?php include __DIR__ . '/../layouts/header.php';?>
+
+    <div class="flex h-screen overflow-hidden">
+
+        <?php include __DIR__ . '/../components/sideBar.php'; ?>
+
+
+    </div>
+
+<?php include __DIR__ . '/../layouts/footer.php';?>
