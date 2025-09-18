@@ -19,10 +19,10 @@
             <span>Reportes y Análisis</span>
         </a>
         <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>5</span>
+            <span>Gamificación 🔒</span>
         </a>
         <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>6</span>
+            <span>Nutrición 🔒</span>
         </a>
         <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
             <span>7</span>

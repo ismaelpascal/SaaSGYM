@@ -1,8 +1,6 @@
-<div class="w-1/4 flex flex-col bg-white border-r border-gray-200">
+<div class="flex flex-col bg-white border-r border-gray-200">
     
     <div class="flex-grow overflow-y-auto">
-
-        <?php include __DIR__ . '/searchBar.php'; ?>
         
         <a href="#" class="block p-4 border-b border-gray-200 hover:bg-gray-50">
             <p class="font-semibold">Juan Pérez</p>
