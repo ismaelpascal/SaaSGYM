@@ -1,20 +1,13 @@
-// Exportamos la función para que main.js pueda importarla
 export default function initAddPayment() {
+    const openBtnPayment = document.getElementById('openPaymentModalBtn');
+    const closeBtnPayment = document.getElementById('closePaymentModalBtn');
+    const cancelBtnPayment = document.getElementById('cancelPaymentModalBtn');
+    const addPayment = document.getElementById('addPaymentModal');
 
-    const openBtn = document.getElementById('openPaymentModalBtn');
-    const closeBtn = document.getElementById('closePaymentModalBtn');
-    const cancelBtn = document.getElementById('cancelPaymentModalBtn');
-    const modal = document.getElementById('addPaymentModal');
+    const openPopupPayment = () => addPayment.classList.remove('hidden');
+    const closePopupPayment = () => addPayment.classList.add('hidden');
 
-    // Si los elementos no existen en la página, no hacemos nada
-    if (!openBtn || !closeBtn || !cancelBtn || !modal) {
-        return;
-    }
-
-    const openPopup = () => modal.classList.remove('hidden');
-    const closePopup = () => modal.classList.add('hidden');
-
-    openBtn.addEventListener('click', openPopup);
-    closeBtn.addEventListener('click', closePopup);
-    cancelBtn.addEventListener('click', closePopup);
+    openBtnPayment.addEventListener('click', openPopupPayment);
+    closeBtnPayment.addEventListener('click', closePopupPayment);
+    cancelBtnPayment.addEventListener('click', closePopupPayment);
 }
