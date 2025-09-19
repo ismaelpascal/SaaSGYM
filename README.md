@@ -1,3 +1,15 @@
+Mermaind
+PK: Primary Key (Clave Primaria)
+FK: Foreign Key (Clave Foránea)
+int: numero entero
+varchar: texto
+date: fecha
+decimal: numero con decimales
+text: texto largo
+bool: verdadero/falso
+
+
+
 Estructura Front Controller
 
 SaaSGYM/                  📂 Carpeta raíz de tu proyecto
