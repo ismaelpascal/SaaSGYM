@@ -1,5 +1,4 @@
 <?php
-
 // 1. Carga manual de clases (SIN COMPOSER)
 // Incluimos explícitamente cada clase que necesitamos.
 require __DIR__ . '/../src/Core/Router.php';

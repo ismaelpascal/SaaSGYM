@@ -4,7 +4,6 @@
 require 'vendor/autoload.php';
 
 // 2. Crear una instancia de Faker
-// Le decimos que genere datos en español ('es_ES') para que sean más realistas.
 $faker = Faker\Factory::create('es_ES');
 
 echo "Generando datos de prueba...\n";
@@ -36,7 +35,6 @@ for ($i = 0; $i < $numero_de_socios; $i++) {
 $sql .= "\n-- Insertando Planes\n";
 $sql .= "INSERT INTO Planes (nombre, tipo, duracion_dias, precio) VALUES ('Plan Mensual', 'tiempo', 30, 30000.00);\n";
 $sql .= "INSERT INTO Planes (nombre, tipo, duracion_dias, precio) VALUES ('Plan Trimestral', 'tiempo', 90, 85000.00);\n";
-// Corregido: Se especifican las columnas correctas
 $sql .= "INSERT INTO Planes (nombre, tipo, duracion_dias, cantidad_clases, precio) VALUES ('Pase de 10 Clases', 'clases', 180, 10, 25000.00);\n";
 
 
@@ -45,11 +43,14 @@ $numero_de_productos = 50;
 $sql .= "\n-- Insertando $numero_de_productos Productos\n";
 $categorias_producto = ['Bebidas', 'Suplementos', 'Ropa', 'Accesorios'];
 for ($i = 0; $i < $numero_de_productos; $i++) {
-    $nombre_producto = $faker->words(3, true);
+    // --- LÍNEA CORREGIDA ---
+    // Pedimos un array de 3 palabras y las unimos con un espacio.
+    $nombre_producto_array = $faker->words(3);
+    $nombre_producto = implode(' ', $nombre_producto_array);
+    
     $categoria = $faker->randomElement($categorias_producto);
     
-    // --- LÍNEA CORREGIDA ---
-    // Generamos un array de palabras y lo unimos. Es el método más seguro.
+    // Hacemos lo mismo para la descripción para máxima compatibilidad.
     $descripcion_array = $faker->words(20);
     $descripcion = implode(' ', $descripcion_array);
 
@@ -66,13 +67,12 @@ for ($i = 0; $i < $numero_de_productos; $i++) {
 $sql .= "\n-- Insertando Membresias para los socios\n";
 for ($i = 1; $i <= $numero_de_socios; $i++) {
     $socio_id = $i;
-    $plan_id = $faker->numberBetween(1, 3); // Asumimos que tenemos 3 planes
+    $plan_id = $faker->numberBetween(1, 3);
     $fecha_inicio = $faker->dateTimeBetween('-6 months', 'now')->format('Y-m-d');
     
     $dias_duracion = 0;
     if ($plan_id == 1) $dias_duracion = 30;
     if ($plan_id == 2) $dias_duracion = 90;
-    // Para el plan de clases, asumimos que tiene una validez de 180 días para ser usado
     if ($plan_id == 3) $dias_duracion = 180;
     
     $fecha_vencimiento = date('Y-m-d', strtotime($fecha_inicio . " +$dias_duracion days"));
