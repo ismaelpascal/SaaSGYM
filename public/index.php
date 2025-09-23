@@ -3,6 +3,7 @@
 // Incluimos explícitamente cada clase que necesitamos.
 require __DIR__ . '/../src/Core/Router.php';
 require __DIR__ . '/../src/Controllers/PageController.php';
+require __DIR__ . '/../src/Controllers/ApiController.php';
 
 // 2. Crear una instancia del Router
 // Como ya no hay namespaces, llamamos a la clase directamente.
@@ -18,8 +19,12 @@ $router->get('/sales', 'PageController@showSales');
 $router->get('/sales/ticket', 'PageController@showSalesTicket');
 $router->get('/sales/catalog', 'PageController@showProductCatalog');
 $router->get('/reports', 'PageController@showReports');
-
 $router->get('/', 'PageController@showLogin');
+
+// API Routes
+$router->get('/api/members', 'ApiController@getMembers');
+$router->get('/api/members/{id}', 'ApiController@getMemberById');
+
 
 // 4. Obtener la URL y el método de la petición
 $basePath = '/SaaSGYM/public';
@@ -32,5 +37,3 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 // 5. Despachar la ruta
 $router->dispatch($uri, $method);
-
-
