@@ -1,6 +1,6 @@
 <?php
 
-// SIN NAMESPACE
+require_once __DIR__ . '/../Models/Member.php';
 
 class PageController
 {
@@ -16,6 +16,7 @@ class PageController
     public function showClients()
     {
         $pageTitle = 'Gestión de Clientes';
+        $members = Member::findAll();
         require __DIR__ . '/../views/pages/clients.view.php';
     }
 

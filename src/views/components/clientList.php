@@ -2,21 +2,36 @@
     
     <div class="flex-grow overflow-y-auto">
         
-        <a href="#" class="block p-4 border-b border-gray-200 hover:bg-gray-50">
-            <p class="font-semibold">Juan Pérez</p>
-            <p class="text-sm text-gray-500">Plan Mensual - Activo</p>
-        </a>
+        <?php if (isset($members) && !empty($members)): ?>
+            <?php foreach ($members as $index => $member): ?>
+                <?php
+                    // Lógica para determinar el texto y color del estado de la membresía
+                    $statusText = 'Sin Plan';
+                    $statusClass = 'text-gray-500'; // Color por defecto
+                    if (!empty($member['estado'])) {
+                        $statusText = ucfirst($member['estado']); // Pone la primera letra en mayúscula
+                        if ($member['estado'] === 'activo') {
+                            $statusClass = 'text-green-600';
+                        } elseif ($member['estado'] === 'vencido') {
+                            $statusClass = 'text-red-600';
+                        }
+                    }
+                    $planText = $member['plan_nombre'] ?? 'N/A';
+                    
+                    // Clase para el fondo del miembro seleccionado (simulando la captura)
+                    // Puedes cambiar esta lógica para que se base en un ID de la URL
+                    $bgClass = ($index === 1) ? 'bg-blue-100' : 'hover:bg-gray-50';
+                ?>
+                <a href="#" class="block p-4 border-b border-gray-200 <?= $bgClass ?>">
+                    <p class="font-semibold"><?= htmlspecialchars($member['nombre'] . ' ' . $member['apellido']) ?></p>
+                    <p class="text-sm text-gray-500">
+                        <?= htmlspecialchars($planText) ?> - <span class="font-semibold <?= $statusClass ?>"><?= htmlspecialchars($statusText) ?></span>
+                    </p>
+                </a>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p class="p-4 text-center text-gray-500">No se encontraron miembros.</p>
+        <?php endif; ?>
 
-        <a href="#" class="block p-4 border-b border-gray-200 bg-blue-100">
-            <p class="font-semibold">Ana García</p>
-            <p class="text-sm text-gray-500">Plan Trimestral - Activo</p>
-        </a>
-
-        <?php for ($i = 0; $i < 15; $i++): ?>
-        <a href="#" class="block p-4 border-b border-gray-200 hover:bg-gray-50">
-            <p class="font-semibold">Cliente Ejemplo <?php echo $i+1; ?></p>
-            <p class="text-sm text-gray-500">Plan Anual - Vencido</p>
-        </a>
-        <?php endfor; ?>
     </div>
 </div>
