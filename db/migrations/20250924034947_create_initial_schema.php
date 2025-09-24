@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class CreateProductsTable extends AbstractMigration
+final class CreateInitialSchema extends AbstractMigration
 {
     public function change(): void
     {
-        // 2. Tabla de Socios (Members)
         $this->table('members')
             ->addColumn('nombre', 'string', ['limit' => 100])
             ->addColumn('apellido', 'string', ['limit' => 100])
@@ -17,14 +16,14 @@ final class CreateProductsTable extends AbstractMigration
             ->addTimestamps() // Crea created_at y updated_at
             ->create();
 
-        // 3. Tabla de Tipos de Membresía
+        // --- 2. Tabla de Tipos de Membresía ---
         $this->table('membership_types')
             ->addColumn('nombre', 'string', ['limit' => 100])
             ->addColumn('precio', 'decimal', ['precision' => 10, 'scale' => 2])
             ->addColumn('duracion_dias', 'integer')
             ->create();
 
-        // 4. Tabla de Pagos (Payments)
+        // --- 3. Tabla de Pagos (Payments) ---
         $this->table('payments')
             ->addColumn('member_id', 'integer', ['signed' => false])
             ->addColumn('membership_type_id', 'integer', ['signed' => false])
@@ -32,6 +31,22 @@ final class CreateProductsTable extends AbstractMigration
             ->addForeignKey('member_id', 'members', 'id', ['delete'=> 'CASCADE', 'update'=> 'NO_ACTION'])
             ->addForeignKey('membership_type_id', 'membership_types', 'id', ['delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'])
             ->addTimestamps()
+            ->create();
+
+        $this->table('memberships')
+            ->addColumn('member_id', 'integer', ['signed' => false])
+            ->addColumn('membership_type_id', 'integer', ['signed' => false])
+            ->addColumn('fecha_inicio', 'date')
+            ->addColumn('fecha_vencimiento', 'date')
+            ->addColumn('estado', 'enum', [
+                'values' => ['activo', 'vencido', 'pausado'],
+                'default' => 'activo'
+            ])
+            ->addTimestamps()
+            ->addIndex(['member_id'])
+            ->addIndex(['membership_type_id'])
+            ->addForeignKey('member_id', 'members', 'id', ['delete'=> 'CASCADE', 'update'=> 'NO_ACTION'])
+            ->addForeignKey('membership_type_id', 'membership_types', 'id', ['delete'=> 'RESTRICT', 'update'=> 'NO_ACTION'])
             ->create();
     }
 }
