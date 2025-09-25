@@ -24,6 +24,7 @@ $router->get('/', 'PageController@showLogin');
 // API Routes
 $router->get('/api/members', 'ApiController@getMembers');
 $router->get('/api/members/{id}', 'ApiController@getMemberById');
+$router->get('/api/products', 'ApiController@getProducts');
 
 
 // 4. Obtener la URL y el método de la petición

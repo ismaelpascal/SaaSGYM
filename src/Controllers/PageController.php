@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../Models/Member.php';
+require_once __DIR__ . '/../Models/Products.php';
 
 class PageController
 {
@@ -29,6 +30,7 @@ class PageController
     public function showPlans()
     {
         $pageTitle = 'Gestión de Planes';
+        $members = Member::findAll();
         require __DIR__ . '/../views/pages/plans.view.php';
     }
 
@@ -41,6 +43,7 @@ class PageController
     public function showSales()
     {
         $pageTitle = 'Ventas';
+        $members = Member::findAll();
         require __DIR__ . '/../views/pages/sales.view/sales.view.php';
     }
 
@@ -53,6 +56,7 @@ class PageController
     public function showProductCatalog()
     {
         $pageTitle = 'Catálogo de Productos';
+        $products = Product::findAll();
         require __DIR__ . '/../views/pages/sales.view/productCatalog.view.php';
     }
 

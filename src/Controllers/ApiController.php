@@ -55,5 +55,11 @@ class ApiController
             echo json_encode(['error' => 'Error en la base de datos: ' . $e->getMessage()]);
         }
     }
+    public function getProducts()
+    {
+        header('Content-Type: application/json');
+        $products = Product::findAll();
+        echo json_encode($products);
+    }
 }
 
