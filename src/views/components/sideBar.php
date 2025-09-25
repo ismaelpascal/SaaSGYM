@@ -39,7 +39,7 @@
     </nav>
 
     <div class="p-6 border-t border-gray-200">
-        <a href="/SaaSGYM/public/login" class="flex items-center py-3 px-2 text-lg text-white bg-red-600 rounded-lg mx-2">
+        <a href="/SaaSGYM/public/logout" class="flex items-center py-3 px-2 text-lg text-white bg-red-600 rounded-lg mx-2">
             <span>Salir</span>
         </a>
     </div>

@@ -1,15 +1,10 @@
 <?php
 
 require_once __DIR__ . '/../Core/Database.php';
-// AÑADIMOS LA INCLUSIÓN DEL MODELO
 require_once __DIR__ . '/../Models/Member.php';
 
 class ApiController
 {
-    /**
-     * Obtiene y devuelve todos los miembros en formato JSON,
-     * utilizando el Modelo Member.
-     */
     public function getMembers()
     {
         try {
@@ -28,10 +23,6 @@ class ApiController
         }
     }
 
-    /**
-     * Obtiene un miembro específico por su ID.
-     * (Esta función también debería ser movida al modelo en el futuro)
-     */
     public function getMemberById($id)
     {
         // ... por ahora, esta lógica puede quedarse aquí, pero lo ideal
@@ -46,7 +37,7 @@ class ApiController
             if ($member) {
                 echo json_encode($member);
             } else {
-                http_response_code(404); // Not Found
+                http_response_code(404);
                 echo json_encode(['error' => 'Miembro no encontrado.']);
             }
         } catch (PDOException $e) {

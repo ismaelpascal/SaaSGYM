@@ -7,7 +7,7 @@
                 SaaS GYM - Iniciar Sesión
             </h2>
         </div>
-        <form class="space-y-4" action="/SaaSGYM/public/clients" method="GET">
+        <form class="space-y-4" action="/SaaSGYM/public/login" method="POST">
             <div>
                 <label for="user" class="sr-only">Usuario</label>
                 <input id="user" name="user" type="text" required class="block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-black rounded-md sm:text-sm" placeholder="Usuario">
@@ -26,4 +26,4 @@
     </div>
     </main>
 
-<?php include __DIR__ . '/../layouts/footer.php';?>
+<?php include __DIR__ . '/../layouts/loginFooter.php';?>

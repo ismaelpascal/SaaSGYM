@@ -5,6 +5,15 @@ require_once __DIR__ . '/../Models/Products.php';
 
 class PageController
 {
+
+    private function checkAuth()
+    {
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: /SaaSGYM/public/login');
+            exit();
+        }
+    }
+    
     /**
      * Muestra la página de login.
      */
