@@ -1,12 +1,9 @@
 {
-    "name": "ddl/saasgym",
+    "name": "dulcedeleche/saa-sgym",
     "autoload": {
         "psr-4": {
-            "Ddl\\Saasgym\\": "src/"
+            "Dulcedeleche\\SaaSgym\\": "src/"
         }
     },
-    "require": {
-        "fzaninotto/faker": "^1.5",
-        "robmorgan/phinx": "^0.16.10"
-    }
+    "require": {}
 }

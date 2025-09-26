@@ -1,3 +1,59 @@
+### Sistema Saas erp para un gimnasio.
+
+Integrantes: Ismael Sebastian Molina Paiva, nadie más.
+
+# Funciones del sistema:
+
+Estadísticas: Cantidad de miembros activos, cuotas por vencer, cantidad de nuevas
+
+inscripciones por mes, gráfico de asistencias para ver horas pico.
+
+Registros financieros: pagos, control de caja, gastos, reportes financieros.
+
+Gestión de miembros: CRUD, cancelar membresía, ver propia información.
+
+Planes mensuales, modificar el monto.
+
+Empleados: crear roles y permisos personalizados.
+
+# Stack Tecnológico:
+
+Frontend: HTML, JavaScript y CSS (Tailwind).
+
+Backend: PHP.
+
+Base de Datos: SQL.
+
+Guía de Estilo: camelCase, PascalCase.
+
+Control de versiones: Git y GitHub.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Mermaind
 PK: Primary Key (Clave Primaria)
 FK: Foreign Key (Clave Foránea)
