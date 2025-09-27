@@ -11,13 +11,13 @@ class TestMemberSeeder extends AbstractSeed
         $data = [];
         for ($i = 1; $i <= 100; $i++) {
             $data[] = [
-                'nombre'   => 'Socio de Prueba',
-                'apellido' => $i,
+                'nombre'   => 'Nombre' . $i,
+                'apellido' => 'Apellido' . $i,
                 'email'    => 'socio' . $i . '@example.com',
-                'dni'      => '0000' . $i,
-                'telefono' => '3446' . $i,
+                'dni'      => '0000-' . $i,
+                'telefono' => '3446-' . $i,
                 'fecha_nacimiento' => date('Y-m-d', strtotime('-' . (20 + $i % 30) . ' years')),
-                'contacto_emergencia' => '9999' . $i,
+                'contacto_emergencia' => '9999-' . $i,
                 'domicilio' => 'Domicilio ' . $i,
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
