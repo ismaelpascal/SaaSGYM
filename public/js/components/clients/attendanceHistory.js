@@ -1,9 +1,9 @@
 export default function initAttendanceHistory() {
     // Elementos del DOM con IDs en camelCase
-    const monthYearDisplay = document.getElementById('calendarMonthYear');
-    const calendarGrid = document.getElementById('calendarGrid');
-    const prevMonthBtn = document.getElementById('prevMonthBtn');
-    const nextMonthBtn = document.getElementById('nextMonthBtn');
+    const monthYearDisplay = document.getElementById('../calendarMonthYear');
+    const calendarGrid = document.getElementById('../calendarGrid');
+    const prevMonthBtn = document.getElementById('../prevMonthBtn');
+    const nextMonthBtn = document.getElementById('../nextMonthBtn');
 
     // Estado del calendario
     let currentDate = new Date();

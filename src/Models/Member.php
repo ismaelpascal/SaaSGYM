@@ -2,10 +2,6 @@
 
 require_once __DIR__ . '/../Core/Database.php';
 
-/**
- * Clase Member
- * Se encarga de toda la lógica de base de datos relacionada con los miembros.
- */
 class Member
 {
     /**
@@ -25,6 +21,13 @@ class Member
                 m.id,
                 m.nombre,
                 m.apellido,
+                m.email,
+                m.dni,
+                m.telefono,
+                m.fecha_nacimiento,
+                m.contacto_emergencia,
+                m.domicilio,
+                m.created_at,
                 mt.nombre AS plan_nombre,
                 ms.estado
             FROM
@@ -46,6 +49,32 @@ class Member
             error_log("Error en Member::findAll(): " . $e->getMessage());
             return [];
         }
+    }
+    public static function findById($id)
+    {
+        $db = Database::getInstance()->getConnection();
+
+        $query = "
+            SELECT
+                id,
+                nombre,
+                apellido,
+                email,
+                dni,
+                fecha_nacimiento,
+                telefono,
+                contacto_emergencia,
+                domicilio,
+                created_at AS fecha_registro
+            FROM
+                members
+            WHERE
+                id = :id
+        ";
+
+        $stmt = $db->prepare($query);
+        $stmt->execute(['id' => $id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
 
