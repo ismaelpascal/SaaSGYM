@@ -1,8 +1,8 @@
-### Sistema Saas erp para un gimnasio.
+# Sistema Saas erp para un gimnasio.
 
 Integrantes: Ismael Sebastian Molina Paiva, nadie más.
 
-# Funciones del sistema:
+### Funciones del sistema:
 
 Estadísticas: Cantidad de miembros activos, cuotas por vencer, cantidad de nuevas
 
@@ -16,7 +16,7 @@ Planes mensuales, modificar el monto.
 
 Empleados: crear roles y permisos personalizados.
 
-# Stack Tecnológico:
+### Stack Tecnológico:
 
 Frontend: HTML, JavaScript y CSS (Tailwind).
 

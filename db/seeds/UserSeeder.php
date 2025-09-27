@@ -22,6 +22,18 @@ class UserSeeder extends AbstractSeed
                 'password'   => password_hash('gym', PASSWORD_DEFAULT),
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
+            ],
+            [
+                'nombre'     => 'p1',
+                'password'   => password_hash('p1', PASSWORD_DEFAULT),
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+            [
+                'nombre'     => 'p2',
+                'password'   => password_hash('p2', PASSWORD_DEFAULT),
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ]
         ];
 
