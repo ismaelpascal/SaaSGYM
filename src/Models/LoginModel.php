@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../Core/Database.php';
 
-class LoginModels
+class LoginModel
 {
     public static function findByUsername($username)
     {

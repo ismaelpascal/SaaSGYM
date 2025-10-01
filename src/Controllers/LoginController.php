@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../Models/LoginModels.php';
+require_once __DIR__ . '/../Models/LoginModel.php';
 
 class LoginController
 {
@@ -21,7 +21,7 @@ class LoginController
             exit();
         }
 
-        $user = LoginModels::findByUsername($username);
+        $user = LoginModel::findByUsername($username);
 
         // Verificar si el usuario existe y la contraseña es correcta
         // Se usa password_verify para comparar la contraseña ingresada con el hash guardado.
