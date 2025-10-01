@@ -5,7 +5,7 @@ require_once __DIR__ . '/../Models/Products.php';
 
 class PageController
 {
-
+ 
     private function checkAuth()
     {
         if (!isset($_SESSION['user_id'])) {
@@ -30,23 +30,11 @@ class PageController
         require __DIR__ . '/../views/pages/clients.view.php';
     }
 
-    public function showCollection()
-    {
-        $pageTitle = 'Cobranza y Finanzas';
-        require __DIR__ . '/../views/pages/collection.view.php';
-    }
-
     public function showPlans()
     {
         $pageTitle = 'Gestión de Planes';
         $members = Member::findAll();
         require __DIR__ . '/../views/pages/plans.view.php';
-    }
-
-    public function showTrain()
-    {
-        $pageTitle = 'Entrenamiento';
-        require __DIR__ . '/../views/pages/train.view.php';
     }
 
     public function showSales()
@@ -69,10 +57,5 @@ class PageController
         require __DIR__ . '/../views/pages/sales.view/productCatalog.view.php';
     }
 
-    public function showReports()
-    {
-        $pageTitle = 'Reportes y Análisis';
-        require __DIR__ . '/../views/pages/reports.view/reports.view.php';
-    }
 }
 

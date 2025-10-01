@@ -3,38 +3,11 @@
         <a href="/SaaSGYM/public/clients" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
             <span>Miembros</span>
         </a>
-        <a href="/SaaSGYM/public/collection" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>Cobranza y Finanzas</span>
-        </a>
         <a href="/SaaSGYM/public/plans" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
             <span>Gestión de Planes</span>
         </a>
-        <a href="/SaaSGYM/public/train" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>Entrenamiento</span>
-        </a>
         <a href="/SaaSGYM/public/sales" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
             <span>Ventas</span>
-        </a>
-        <a href="/SaaSGYM/public/reports" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>Reportes y Análisis</span>
-        </a>
-        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>Gamificación 🔒</span>
-        </a>
-        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>Nutrición 🔒</span>
-        </a>
-        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>7</span>
-        </a>
-        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>8</span>
-        </a>
-        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>9</span>
-        </a>
-        <a href="#" class="flex items-center py-3 px-2 text-lg hover:bg-gray-200 rounded-lg mx-2">
-            <span>10</span>
         </a>
     </nav>
 
