@@ -3,13 +3,19 @@
     <div class="flex-grow overflow-y-auto">
         
         <?php if (isset($members) && !empty($members)): ?>
-            <?php foreach ($members as $index => $member): ?>
+            <?php 
+            // Esta variable $selected_id viene del PageController
+            // Nos dice qué cliente está activo (0 si no hay ninguno)
+            $active_id = $selected_id ?? 0; 
+            ?>
+
+            <?php foreach ($members as $member): ?>
                 <?php
-                    // Lógica para determinar el texto y color del estado de la membresía
+                    // ... (Tu lógica de $statusText y $statusClass no cambia) ...
                     $statusText = 'Sin Plan';
-                    $statusClass = 'text-gray-500'; // Color por defecto
+                    $statusClass = 'text-gray-500';
                     if (!empty($member['estado'])) {
-                        $statusText = ucfirst($member['estado']); // Pone la primera letra en mayúscula
+                        $statusText = ucfirst($member['estado']);
                         if ($member['estado'] === 'activo') {
                             $statusClass = 'text-green-600';
                         } elseif ($member['estado'] === 'vencido') {
@@ -18,11 +24,13 @@
                     }
                     $planText = $member['plan_nombre'] ?? 'N/A';
                     
-                    // Clase para el fondo del miembro seleccionado (simulando la captura)
-                    // Puedes cambiar esta lógica para que se base en un ID de la URL
-                    $bgClass = ($index === 1) ? 'bg-blue-100' : 'hover:bg-gray-50';
+                    // MODIFICACIÓN: Resaltar el cliente si su ID es el activo
+                    $bgClass = ($member['id'] == $active_id) ? 'bg-blue-100' : 'hover:bg-gray-50';
                 ?>
-                <a href="#" class="block p-4 border-b border-gray-200 <?= $bgClass ?>">
+
+                <a href="/SaaSGYM/public/clients?id=<?= htmlspecialchars($member['id']) ?>" 
+                   class="block p-4 border-b border-gray-200 <?= $bgClass ?>">
+                    
                     <p class="font-semibold"><?= htmlspecialchars($member['nombre'] . ' ' . $member['apellido']) ?></p>
                     <p class="text-sm text-gray-500">
                         <?= htmlspecialchars($planText) ?> - <span class="font-semibold <?= $statusClass ?>"><?= htmlspecialchars($statusText) ?></span>
