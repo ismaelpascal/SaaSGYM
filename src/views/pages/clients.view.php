@@ -29,7 +29,6 @@
                     <?php include __DIR__ . '/../components/clients/clientInfo.php'; ?>
                     <?php include __DIR__ . '/../components/clients/clientNotes.php'; ?>
                 </div>
-                <?php include __DIR__ . '/../components/clients/attendanceHistory.php'; ?>
                 <?php include __DIR__ . '/../components/clients/paymentHistory.php'; ?>
             </div>
 
