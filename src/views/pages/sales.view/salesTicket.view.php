@@ -23,16 +23,16 @@
                 <div class="flex items-center space-x-6 pr-48">
                     <div class="text-right">
                         <p class="text-sm font-medium text-gray-500">Pendientes de Retiro</p>
-                        <p class="text-2xl font-bold text-gray-900">124</p>
+                        <p id="pendingSalesCount" class="text-2xl font-bold text-gray-900">...</p>
                     </div>
                     <div class="text-right">
                         <p class="text-sm font-medium text-gray-500">Ventas (Este Mes)</p>
-                        <p class="text-2xl font-bold text-gray-900">$250,800</p>
+                        <p class="text-2xl font-bold text-gray-900">$000,000</p>
                     </div>
                 </div>
             </header>
 
-            <?php include __DIR__ . '/../../components/sales/pendingItems.php'; ?>
+            <?php include __DIR__ . '/../../components/sales/pendingSales.php'; ?>
 
         </div>
     </main>

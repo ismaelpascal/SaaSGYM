@@ -1,4 +1,3 @@
-<!-- 1. Planes Disponibles -->
 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
     <div class="flex justify-between items-center mb-4">
         <h3 class="text-xl font-bold text-gray-800">Planes Disponibles</h3>
@@ -7,20 +6,7 @@
             <span>Crear Nuevo Plan</span>
         </button>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="border p-4 rounded-lg bg-gray-50">
-            <h4 class="font-bold text-gray-900">Plan Mensual</h4>
-            <p class="text-sm text-gray-600">Acceso ilimitado por 30 días.</p>
-            <p class="text-lg font-bold text-right mt-2">$30,000</p>
-        </div>
-
-        <?php for ($i = 0; $i < 20; $i++): ?>
-        <div class="border p-4 rounded-lg bg-gray-50">
-            <h4 class="font-bold text-gray-900">Plam ***</h4>
-            <p class="text-sm text-gray-600">*****.</p>
-            <p class="text-lg font-bold text-right mt-2">$**,***</p>
-        </div>
-        <?php endfor; ?>
-
+    <div id="availablePlansContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <p class="text-gray-500">Cargando planes...</p>
     </div>
 </div>

@@ -1,5 +1,8 @@
 export default function initAddNotes() {
     const openBtnNote = document.getElementById('openNoteHistoryBtn');
+    if (!openBtnNote) {
+        return;
+    }
     const closeBtnNote = document.getElementById('closeNoteHistoryBtn');
     const addNote = document.getElementById('noteHistoryModal');
 

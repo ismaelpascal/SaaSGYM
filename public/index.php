@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // 1. Carga manual de clases (SIN COMPOSER)
 require_once __DIR__ . '/../src/Core/Router.php';
 require_once __DIR__ . '/../src/Controllers/PageController.php';
@@ -21,11 +23,14 @@ $router->get('/sales/ticket', 'PageController@showSalesTicket');
 $router->get('/sales/catalog', 'PageController@showProductCatalog');
 
 $router->get('/api/members', 'ApiController@getMembers');
+$router->post('/api/members', 'ApiController@createMember');
 $router->get('/api/members/{id}', 'ApiController@getMemberById');
 $router->get('/api/products', 'ApiController@getProducts');
-$router->get('/api/members/{Id}/notes', 'ApiController@getMemberNotesById');
-
-
+$router->get('/api/members/{id}/notes', 'ApiController@getMemberNotesById');
+$router->post('/api/members/{id}/notes', 'ApiController@createMemberNote');
+$router->get('/api/members/{id}/payments', 'ApiController@getMemberPaymentsById');
+$router->get('/api/plans', 'ApiController@getMembershipTypes');
+$router->get('/api/sales/pending', 'ApiController@getPendingSales');
 
 // 4. Obtener la URL y el método de la petición
 $basePath = '/SaaSGYM/public';

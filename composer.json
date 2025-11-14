@@ -1,9 +1,0 @@
-{
-    "name": "dulcedeleche/saa-sgym",
-    "autoload": {
-        "psr-4": {
-            "Dulcedeleche\\SaaSgym\\": "src/"
-        }
-    },
-    "require": {}
-}
