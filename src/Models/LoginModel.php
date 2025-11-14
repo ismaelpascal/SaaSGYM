@@ -14,13 +14,8 @@ class LoginModel
             WHERE
                 nombre = :username";
 
-        try {
-            $stmt = $db->prepare($query);
-            $stmt->execute(['username' => $username]);
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            error_log("Error en User::findByUsername(): " . $e->getMessage());
-            return false;
-        }
+        $stmt = $db->prepare($query);
+        $stmt->execute(['username' => $username]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }

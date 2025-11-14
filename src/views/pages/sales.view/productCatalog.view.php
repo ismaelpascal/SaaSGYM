@@ -24,11 +24,11 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-right">
                         <p class="text-sm font-medium text-gray-500">Productos Totales</p>
-                        <p class="text-2xl font-bold text-gray-900">124</p>
+                        <p id="productTotalCount" class="text-2xl font-bold text-gray-900">...</p>
                     </div>
                     <div class="text-right">
                         <p class="text-sm font-medium text-gray-500">Ventas (Este Mes)</p>
-                        <p class="text-2xl font-bold text-gray-900">$250,800</p>
+                        <p class="text-2xl font-bold text-gray-900">$000,000</p>
                     </div>
                     <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center font-semibold">
                         <span>➕ Añadir Producto</span>

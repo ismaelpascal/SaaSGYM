@@ -7,7 +7,7 @@
             <button id="addClientClose" class="text-gray-400 hover:text-gray-600 text-3xl">✖️</button>
         </div>
 
-        <form action="#" method="POST" class="space-y-4">
+        <form id="addClientForm" method="POST" class="space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
@@ -52,7 +52,7 @@
             
             <div class="pt-4 flex justify-end space-x-2">
                  <button type="button" id="addClientCancel" class="bg-gray-200 text-gray-800 py-2 px-4 rounded-md hover:bg-gray-300">Cancelar</button>
-                 <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Guardar Cliente</button>
+                 <button type="submit" id="addClientSubmitBtn" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Guardar Cliente</button>
             </div>
         </form>
 

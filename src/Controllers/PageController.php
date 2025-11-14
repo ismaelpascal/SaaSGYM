@@ -16,9 +16,6 @@ class PageController
         }
     }
     
-    /**
-     * Muestra la página de login.
-     */
     public function showLogin()
     {
         $pageTitle = 'Iniciar Sesión';
@@ -27,7 +24,9 @@ class PageController
 
     public function showClients()
     {
+        $this->checkAuth();
         $pageTitle = 'Gestión de Clientes';
+<<<<<<< HEAD
 
         // 2. OBTENER *SIEMPRE* LA LISTA COMPLETA (para la izquierda)
         $members = Member::findAll();
@@ -51,31 +50,36 @@ class PageController
         // 6. CARGAR LA VISTA
         // Ahora, la vista tendrá acceso a $members (la lista)
         // y opcionalmente a $selected_member, $member_notes y $member_payments
+=======
+>>>>>>> error
         require __DIR__ . '/../views/pages/clients.view.php';
     }
 
     public function showPlans()
     {
+        $this->checkAuth();
         $pageTitle = 'Gestión de Planes';
-        $members = Member::findAll();
+        $plans = MembershipType::findAll();
         require __DIR__ . '/../views/pages/plans.view.php';
     }
 
     public function showSales()
     {
+        $this->checkAuth();
         $pageTitle = 'Ventas';
-        $members = Member::findAll();
         require __DIR__ . '/../views/pages/sales.view/sales.view.php';
     }
 
     public function showSalesTicket()
     {
+        $this->checkAuth();
         $pageTitle = 'Venta a Retirar';
         require __DIR__ . '/../views/pages/sales.view/salesTicket.view.php';
     }
 
     public function showProductCatalog()
     {
+        $this->checkAuth();
         $pageTitle = 'Catálogo de Productos';
         $products = Product::findAll();
         require __DIR__ . '/../views/pages/sales.view/productCatalog.view.php';

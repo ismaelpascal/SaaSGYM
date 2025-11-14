@@ -20,7 +20,8 @@ class Database
     {
         // Cargar la configuración de la base de datos desde phinx.php
         $config = require __DIR__ . '/../../phinx.php';
-        $env = $config['environments']['development'];
+        //$env = $config['environments']['development'];
+        $env = $config['environments']['testing'];
 
         $dsn = sprintf(
             '%s:host=%s;port=%d;dbname=%s;charset=%s',

@@ -1,12 +1,18 @@
 <div class="bg-white p-6 rounded-lg border border-gray-200">
     <div class="flex justify-between items-center border-b pb-2 mb-4">
         <h3 class="text-xl font-bold text-gray-800">Historial de Pagos</h3>
+<<<<<<< HEAD
             <button id="openPaymentModalBtn" class="flex items-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors
             <?php if (!isset($selected_member)) echo 'hidden'; // Oculta el botón si no hay cliente ?>">
+=======
+            
+            <button id="openPaymentModalBtn" class="flex items-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors hidden">
+>>>>>>> error
                 Cobrar
             </button>
     </div>
 
+<<<<<<< HEAD
     <ul>
         <?php if (isset($member_payments) && !empty($member_payments)): ?>
             <?php foreach ($member_payments as $payment): ?>
@@ -22,5 +28,11 @@
         <?php else: ?>
             <li class="text-gray-500">Selecciona un cliente para ver su historial de pagos.</li>
         <?php endif; ?>
+=======
+    <ul id="paymentHistoryList">
+        <li id="paymentHistoryPlaceholder" class="text-gray-500">
+            Selecciona un cliente para ver su historial de pagos.
+        </li>
+>>>>>>> error
     </ul>
 </div>

@@ -5,6 +5,7 @@
             <button id="closeNoteHistoryBtn" ...>&times;</button>
         </div>
 
+<<<<<<< HEAD
         <div class="space-y-4 max-h-96 overflow-y-auto">
             
             <?php if (isset($member_notes) && !empty($member_notes)): ?>
@@ -29,6 +30,13 @@
                 <p class="text-gray-500">Selecciona un cliente para ver su historial de notas.</p>
             <?php endif; ?>
 
+=======
+        <div id="noteHistoryList" class="space-y-4 max-h-96 overflow-y-auto">
+            <div id="noteHistoryPlaceholder">
+                <p class="text-gray-500">Selecciona un cliente para ver sus notas.</p>
+            </div>
+>>>>>>> error
         </div>
+
     </div>
 </div>

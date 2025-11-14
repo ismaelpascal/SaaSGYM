@@ -1,5 +1,8 @@
 export default function initAddClients() {
     const openBtnClients = document.getElementById('addClientTrigger');
+    if (!openBtnClients) {
+        return; 
+    }
     const closeBtnClients = document.getElementById('addClientClose');
     const cancelBtnClients = document.getElementById('addClientCancel');
     const addClients = document.getElementById('addClient');
